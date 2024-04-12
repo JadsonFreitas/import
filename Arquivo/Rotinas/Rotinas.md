@@ -58,7 +58,7 @@ colocar no campo periodo de venda des do inicio de 2018
 4. 
 
 
-## Comissão diaria E adiantamento de bônus
+## Adiantamento de bônus
 
 
 copy *.csv novoarquivo-win.csv
