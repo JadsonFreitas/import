@@ -24,6 +24,7 @@
    - Alterar a codificação do arquivo CSV para UTF-8.
 <br/>
 1
+
 4. **Fazer o upload:**
    Após as alterações nos arquivos, faça o upload deles no seguinte link: [https://www.signabrasil.com.br/importarbd](https://www.signabrasil.com.br/importarbd).
 <br/>
@@ -61,6 +62,33 @@ colocar no campo periodo de venda des do inicio de 2018
 ## Adiantamento de bônus
 
 
+
 copy *.csv novoarquivo-win.csv
 
 
+1 - Diárias
+	
+	A - Alimentar o banco de dados (8:00 e 8:30)
+		1 - Rodar scraping
+		2 - Formatar os arquivos
+		3 - Importar no bacoffice
+		4 - Atualizar comissões
+
+	B - Atulizar Power BI ( 8:30 )
+		1 Atualizar e publicar power BI
+
+	C - Enviar validações diárias PARÁ ( 9:00 )
+		1 - Gerar arquivo de comissões no backoffice
+			financeiro > relatório de comissões > seleciona a data > exporta para o excel > Filtrar Maria aparecida e montar na planilha para envio até coluna R
+	 	2 - Enviar por e-mail
+
+	D - Adiantamento e bonus ( 9:30 )
+		1 - Atualizar arquivos de adiantamento e bonus
+
+	E - Comissões diárias ( 10:00)
+		1 - Montar comissões diárias Para, Amapá e Tocantins.
+
+
+2 - Semanais 
+
+   A - Comissões semanais (começar na segunda)

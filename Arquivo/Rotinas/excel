@@ -6,7 +6,7 @@ Sub SubstituirPontosPorVirgulas()
     Dim rng As Range
 
     ' Defina a planilha onde estão os dados
-    Set ws = ThisWorkbook.Sheets("NomeDaSuaPlanilha")
+    Set ws = ThisWorkbook.Sheets("novoarquivo-win")
 
     ' Encontrar a última linha com dados na coluna J
     ultimaLinha = ws.Cells(ws.Rows.Count, "J").End(xlUp).Row
