@@ -45,7 +45,7 @@
          
          1 - Montar comissões diárias Para, Amapá e Tocantins.
 
-   ## F - Atualizar Acess e Comissões
+   ## F - Atualizar Acess e consorcio
 
       https://www.parceirosbbconsorcios.com.br
 
