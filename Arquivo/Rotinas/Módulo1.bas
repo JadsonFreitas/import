@@ -1,12 +1,13 @@
 Attribute VB_Name = "Módulo1"
-Sub SubstituirCodigosEPontosEExcluirLinhas()
+Sub SubstituirCodigosEPontosEExcluirLinhasEFilterContratacaoCDC()
     Dim ws As Worksheet
     Dim ultimaLinha As Long
     Dim dataUltimoDia As Date
     Dim i As Long
     Dim cel As Range
-    Dim col As Range
     Dim rng As Range
+    Dim wsRange As Range
+    Dim filterRange As Range
 
     ' Defina a planilha onde estão os dados
     Set ws = ThisWorkbook.Sheets("novoarquivo-win")
@@ -36,10 +37,27 @@ Sub SubstituirCodigosEPontosEExcluirLinhas()
                 SearchOrder:=xlByRows, MatchCase:=False, _
                 SearchFormat:=False, ReplaceFormat:=False
 
+    ' Filtra a coluna "O" para mostrar somente "Contratação CDC" e exclui todas as outras correspondências
+    If ws.AutoFilterMode Then ws.AutoFilterMode = False ' Remove filtro anterior, se houver
+    ws.Rows(1).AutoFilter ' Adiciona filtro automático
+    Set wsRange = ws.Range("A1:O" & ws.Cells(ws.Rows.Count, "O").End(xlUp).Row)
+    wsRange.AutoFilter Field:=15, Criteria1:="<>*Contratação CDC*"
+    Set filterRange = wsRange.Offset(1, 0).Resize(wsRange.Rows.Count - 1, wsRange.Columns.Count).SpecialCells(xlCellTypeVisible)
+    If Not filterRange Is Nothing Then
+        filterRange.EntireRow.Delete
+    End If
+
+    ' Remover o filtro aplicado
+    If ws.AutoFilterMode Then ws.AutoFilterMode = False
+
     ' Encontrar a última linha com dados na coluna B
     ultimaLinha = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
 
+    ' Aplica a ordenação crescente na coluna B
+    ws.Range("A1:O" & ultimaLinha).Sort Key1:=ws.Range("B1"), Order1:=xlAscending, Header:=xlYes
+
     ' Obter a data do último dia na coluna B
+    ultimaLinha = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
     dataUltimoDia = ws.Cells(ultimaLinha, "B").Value
 
     ' Loop para excluir linhas que não correspondem à data do último dia na coluna B
@@ -49,7 +67,6 @@ Sub SubstituirCodigosEPontosEExcluirLinhas()
         End If
     Next i
 
-    MsgBox "Substituições e exclusões concluídas!", vbInformation
+    MsgBox "Substituições, exclusões e filtro concluídos!", vbInformation
 End Sub
-
 

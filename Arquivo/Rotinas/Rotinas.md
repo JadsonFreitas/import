@@ -35,6 +35,7 @@
          
       1 - Atualizar arquivos de adiantamento e bonus
          Copy *.csv novoarquivo-win.csv
+         Copy *.xlsx novoarquivo-win.xlsx
 
             67406: 3R PROMOTORA
             69075: FICASA
@@ -63,3 +64,64 @@
       1 - 
       2 - 
       3 -  
+
+
+# http://192.168.1.102:80/WebServices/Device
+
+
+
+C:\Users\Administrador\AppData\Local\Microsoft\Outlook
+
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+
+>E-mail CCI Signa
+	user: credito@signabrasil.com.br
+	senha: Sgn$prm2k22
+	Observação: Outlook
+
+
+   email-ssl.com.br
+
+
+   update producao.creditos_bb cb SET VALIDACAO = 'MARLENE DA SILVA DAMASCENA' WHERE operacao 
+IN('155371675','155433723','155494714','155552391','155653605','155655265','155667158',
+'155813764','155894883','156068235','156111426','156142035','156157856','156162490'
+);
+
+select *from producao.creditos_bb cb  where operacao 
+IN('155371675','155433723','155494714','155552391','155653605','155655265','155667158',
+'155813764','155894883','156068235','156111426','156142035','156157856','156162490'
+);
+
+CD C:\Users\Administrador\OneDrive - Signa Brasil\Documentos\apiAutomatizacao\apiAutomatizacao
+
+
+=SE($Q1="Consulta não realizada por problemas técnicos";1;0)
+=$Q$1:$R$100
+
+Sim
+=SE($Q1="sim";1;0)
+=$1:$100
+
+3100
+=SE($G1=3100;1;0)
+=$1:$100
+
+
+BARBARA FERNANDES DA SILVA 
+BRUNA MARUCCI BELLUCI
+CILANE ALVES DOS SANTOS PAVAO
+HELOYSA FERREIRA LIMA
+Renata de Carli Samora
+SARAH RIBEIRO MARIANO 
+Laryssa Izabelli Lázaro Guiguer
+
+
+SE(E(OU(G44=2880;G44=2881;G44=2882;G44=2891);E(H44<>1640;H44<>137478));"CC";SE(E(G44=2887;E(H44<>1640;H44<>137478));"PT";SE(E(OU(G44=2896;G44=2991;G44=2992;G44=2996;G44=2997);E(H44<>1640;H44<>137478));"NC";SE(E(G44=2097;E(H44<>1640;H44<>137478));"FGTS";SE(E(OU(G44=3100;G44=3101);E(H44<>1640;H44<>137478));"DT";SE(H44=1640;"INSS-CC";SE(H44=137478;"INSS-NC";" ")))))))
