@@ -1,0 +1,115 @@
+
+Consignado Ac    
+    Consignado Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "CC" &&
+                            base[jur/100]  >= 0.0121 &&
+                            base[Parcelas] >= 13 &&
+                            base[Parcelas] <= 120 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+    
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"CC";'Dados Cred'!S:S;">="&1,21%;
+    'Dados Cred'!K:K;">="&13;'Dados Cred'!K:K;"<="&120;'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+INSS 16404 Ac
+
+        INSS 16404 Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "INSS-CC" &&
+                            base[jur/100]  >= 0.0139 &&
+                            base[Parcelas] >= 13 &&
+                            base[Parcelas] <= 84 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"INSS-CC";'Dados Cred'!S:S;">="&1,39%;
+    'Dados Cred'!K:K;">="&13;'Dados Cred'!K:K;"<="&84;'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+INSS 1374785 Ac
+
+        INSS 1374785 Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "INSS-NC" &&
+                            base[jur/100]  >= 0.02 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"INSS-NC";'Dados Cred'!S:S;">="&2%;
+    'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+Portabilidade Ac
+
+        Portabilidade Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "PT" &&
+                            base[jur/100]  >= 0.0129 &&
+                            base[Parcelas] >= 24 &&
+                            base[Parcelas] <= 120 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"PT";'Dados Cred'!S:S;">="&1,29%;
+    'Dados Cred'!K:K;">="&24;'Dados Cred'!K:K;"<="&120;'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+Não Consignado Ac
+        Não Consignado Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "NC" &&
+                            base[jur/100]  >= 0.0184 &&
+                            base[Parcelas] >= 13 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"NC";'Dados Cred'!S:S;">="&1,84%;
+    'Dados Cred'!K:K;">="&13;'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+Decimo Terceiro Ac
+        Decimo Terceiro Ac = CALCULATE(SUM(base[Valor Financiado Líquido]),VALUES(chave[USUARIO]),
+                    FILTER(base,base[Indent Linha] = "DT" &&
+                            base[jur/100]  >= 0.02 &&
+                            base[Indicador Restrição SRCC] <> "Sim" &&
+                            base[Indicador Restrição SRCC] <> "Consulta não realizada por problemas técnicos"
+                        ))
+
+
+    =SOMASES('Dados Cred'!M:M;'Dados Cred'!D:D;[@Operador];'Dados Cred'!V:V;"="&"DT";'Dados Cred'!S:S;">="&2%;
+    'Dados Cred'!D:D;"<>"&"MARIA APARECIDA BEZERRA DE ARAUJO";
+    'Dados Cred'!U:U;"<>"&"Sim";'Dados Cred'!U:U;"<>"&"Consulta não realizada por problemas técnicos")
+
+coban
+    coban = IF([Cód.Coban]= 67406,"3R PROMOTORA",
+    IF([Cód.Coban]=69075,"FICASA",IF([Cód.Coban]=12198,"INVEST",IF([Cód.Coban]=13701,"NOVA PROMOTORA",""))))
+
+Indent Linha
+    Indent Linha = IF(AND(OR(VALUE([Código Produto]) = 2880,
+                         VALUE([Código Produto]) = 2881
+                     ||  VALUE([Código Produto]) = 2882 
+                     ||  VALUE([Código Produto]) = 2891),   AND(VALUE([Código Convênio])<>1640, 
+                                                                VALUE([Código Convênio])<>137478)),"CC",
+                  IF(AND(VALUE([Código Produto]) =2887,     AND(VALUE([Código Convênio])<>1640, 
+                                                                VALUE([Código Convênio])<>137478)),"PT",                               
+               IF(AND(OR(VALUE([Código Produto]) = 2896,
+                         VALUE([Código Produto]) = 2991
+                     ||  VALUE([Código Produto]) = 2992 
+                     ||  VALUE([Código Produto]) = 2996
+                     ||  VALUE([Código Produto]) = 2997),   AND(VALUE([Código Convênio])<>1640, 
+                                                                VALUE([Código Convênio])<>137478)),"NC",                 
+                  IF(AND(VALUE([Código Produto]) =2097,     AND(VALUE([Código Convênio])<>1640, 
+                                                                VALUE([Código Convênio])<>137478)),"FGTS",
+               IF(AND(OR(VALUE([Código Produto]) = 3100,
+                         VALUE([Código Produto]) = 3101),   AND(VALUE([Código Convênio])<>1640, 
+                                                                VALUE([Código Convênio])<>137478)),"DT",
+                  IF(VALUE([Código Convênio])=1640,"INSS-CC",
+                  IF(VALUE([Código Convênio])=137478,"INSS-NC",""
+                )))))))
+
+
+                01adi = IF(VALUES(ADIANTAMENTOC[CRÉDITO TOTAL])>=107000 && VALUES(ADIANTAMENTOC[MÍNIMO INSS])>=0,VALUES(ADIANTAMENTOC[VALOR])  )
+
+                01adi = IF(VALUES(data_soucer[Total Crédito Líquido LLR - Ac])>=107000 && VALUES(data_soucer[Soma INSS LLR])>=0,175)
